@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.example.specialone"
-    compileSdk = 33  // veya Flutter projesinde kullanılan sürüm
+    compileSdk = 35  // veya Flutter projesinde kullanılan sürüm
 
     defaultConfig {
         applicationId = "com.example.specialone"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 3
         versionCode = 1
         versionName = "1.0"
     }
