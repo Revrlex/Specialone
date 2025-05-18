@@ -3,9 +3,13 @@ workflows:
     name: Android Workflow
     environment:
       flutter: stable
-      xcode: latest
+      android:
+        compile_sdk: 33
+        build_tools: 33.0.2
+        min_sdk: 21
     scripts:
       - flutter pub get
       - flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
+  
