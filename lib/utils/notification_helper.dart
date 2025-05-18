@@ -78,7 +78,24 @@ class NotificationHelper {
     void onDidReceiveLocalNotification(
             int id, String? title, String? body, String? payload) async {
         // Display a dialog when notification is received
-        debugPrint('Received notification: $title');
+        // Helper method to get color based on category
+        Color _getCategoryColor(String category) {
+            switch (category.toLowerCase()) {
+                case 'work':
+                    return Colors.blue;
+                case 'personal':
+                    return Colors.green;
+                case 'shopping':
+                    return Colors.orange;
+                case 'health':
+                    return Colors.red;
+                case 'education':
+                    return Colors.purple;
+                default:
+                    return Colors.grey;
+            }
+        }
+    }
     }
 
     // Schedule task notification
